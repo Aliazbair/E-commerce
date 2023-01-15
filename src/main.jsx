@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 
+const ProUl = 'https://hatota-dev.com/api/graphql';
+
 const client = new ApolloClient({
-  uri: 'http://127.0.0.1:8000/graphql',
+  uri: 'https://hatota-dev.com/api/graphql',
   cache: new InMemoryCache(),
 });
 
