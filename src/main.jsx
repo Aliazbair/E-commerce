@@ -6,7 +6,7 @@ import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 const ProUl = 'https://hatota-dev.com/api/graphql';
 
 const client = new ApolloClient({
-  uri: ProUl || 'http://127.0.0.1:8000/graphql',
+  uri: ProUl,
   cache: new InMemoryCache(),
 });
 
