@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/public/fonts/Cairo.ttf");
+}
+@font-face {
+  font-family: "Amiri";
+  src: url("/public/fonts/Amiri-BoldItalic.ttf");
+}
+@font-face {
+  font-family: "Amiri-italic";
+  src: url("/public/fonts/Amiri-Italic.ttf");
+}
