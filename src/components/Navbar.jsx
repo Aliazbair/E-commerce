@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Navbar() {
     const products = useSelector((state) => state.card.products);
   return (
-    <nav className='flex justify-between items-center px-10 bg-indigo-600 text-gray-300 py-2'>
+    <nav className='fixed top-0 w-full flex justify-between items-center px-10 bg-indigo-600 text-gray-300 py-2'>
       <div>
         <h3>Ali Auth</h3>
       </div>
