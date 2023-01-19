@@ -1,9 +1,18 @@
 import { GET_PRODUCTS } from '../graphql/query/products';
 import { useQuery } from '@apollo/client';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart } from '../redux/cardReducer';
+import { useState } from 'react';
 export const Products = () => {
+  const [quantity, setQuantity] = useState(1);
+  const products = useSelector((state) => state.card.products);
+
+  const dispatch = useDispatch();
+
+  console.log(products);
   const { data, error, loading } = useQuery(GET_PRODUCTS);
   if (loading) return 'loading';
-  console.log(data);
+  // console.log(data);
   return (
     <div className=''>
       <h2>Products page</h2>
@@ -14,7 +23,7 @@ export const Products = () => {
               <img
                 src={image}
                 alt=''
-                className='w-[100%] object-cover rounded'
+                className='w-[100%] h-52 object-cover rounded'
               />
               <div className='p-3'>
                 <div className='flex items-center justify-between'>
@@ -32,7 +41,21 @@ export const Products = () => {
                   <strong>${price}</strong>
                 </p>
 
-                <button className='bg-yellow-700 text-white px-2 py-1 rounded-sm mt-5'>
+                <button
+                  onClick={() =>
+                    dispatch(
+                      addToCart({
+                        id,
+                        title,
+                        description,
+                        image,
+                        price,
+                        quantity,
+                      })
+                    )
+                  }
+                  className='bg-yellow-700 text-white px-2 py-1 rounded-sm mt-5'
+                >
                   add to card
                 </button>
               </div>
