@@ -12,7 +12,7 @@ function App() {
     <div className=''>
       <Navbar />
 
-      <main className=' container max-w-7xl mx-auto py-20 px-10'>
+      <main className=' '>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
