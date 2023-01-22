@@ -2,16 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Cairo';
+  src: url('/public/fonts/Cairo.ttf');
+}
+@font-face {
+  font-family: 'Amiri';
+  src: url('/public/fonts/Amiri-BoldItalic.ttf');
+}
+@font-face {
+  font-family: 'Amiri-italic';
+  src: url('/public/fonts/Amiri-Italic.ttf');
+}
 
-@font-face {
-  font-family: "Cairo";
-  src: url("/public/fonts/Cairo.ttf");
+.ali {
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
-@font-face {
-  font-family: "Amiri";
-  src: url("/public/fonts/Amiri-BoldItalic.ttf");
-}
-@font-face {
-  font-family: "Amiri-italic";
-  src: url("/public/fonts/Amiri-Italic.ttf");
+
+.ali2 {
+  border-radius: 76% 24% 82% 18% / 40% 70% 30% 60%;
 }

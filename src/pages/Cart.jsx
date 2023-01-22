@@ -15,7 +15,10 @@ export const Cart = () => {
   return (
     <div className='flex flex-col  justify-center gap-5 '>
       {products.map(({ id, title, description, image, quantity, price }) => (
-        <div className='flex items-center justify-center space-x-2 shadow-sm shadow-emerald-400 py-4 px-2 '>
+        <div
+          key={id}
+          className='flex items-center justify-center space-x-2 shadow-sm shadow-emerald-400 py-4 px-2 '
+        >
           <img src={image} className='w-10' alt='' />
           <div>
             <h1 className='text-xl font-bold font-mono'>{title}</h1>
@@ -33,7 +36,7 @@ export const Cart = () => {
           </button>
         </div>
       ))}
-      
+
       <p>{total()}</p>
       <button onClick={() => dispatch(resetCart())}>Reset Cart</button>
       <button className='bg-yellow-600 px-1 py-2 w-full rounded-md text-gray-300 block hover:opacity-70 transition-all duration-300'>
