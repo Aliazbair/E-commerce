@@ -16,14 +16,14 @@ export const Products = () => {
   return (
     <div className=''>
       <h2>Products page</h2>
-      <div className='grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4 p-3 '>
+      <div className='grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4 p-3 '>
         {data.products.map(
           ({ title, category, id, count, rate, description, price, image }) => (
             <div key={id} className='shadow shadow-gray-500'>
               <img
                 src={image}
                 alt=''
-                className='w-[100%] h-52 object-cover rounded'
+                className='w-full h-52 object-cover rounded'
               />
               <div className='p-3'>
                 <div className=''>
@@ -40,7 +40,7 @@ export const Products = () => {
                   <strong>${price}</strong>
                 </p>
 
-                <div className='flex space-x-1'>
+                {/* <div className='flex space-x-1'>
                   <button
                     className='bg-gray-400 w-10 text-slate-100 rounded-sm'
                     onClick={() => setQuantity((prev) => prev + 1)}
@@ -56,7 +56,7 @@ export const Products = () => {
                   >
                     -
                   </button>
-                </div>
+                </div> */}
 
                 <div className=''>
                   <button
