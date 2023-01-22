@@ -25,7 +25,9 @@ export const cardSlice = createSlice({
 
     // remove card
     removeCard: (state, action) => {
-      state.products.filter((item) => item.id !== action.payload.id);
+      state.products = state.products.filter(
+        (item) => item.id !== action.payload
+      );
     },
 
     // reset cart

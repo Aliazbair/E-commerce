@@ -9,7 +9,7 @@ export const Products = () => {
 
   const dispatch = useDispatch();
 
-  console.log(products);
+  // console.log(products);
   const { data, error, loading } = useQuery(GET_PRODUCTS);
   if (loading) return 'loading';
   // console.log(data);
@@ -27,7 +27,9 @@ export const Products = () => {
               />
               <div className='p-3'>
                 <div className=''>
-                  <h2 className='text-lg md:text-xl font-semibold'>{title.slice(0,20)}</h2>
+                  <h2 className='text-lg md:text-xl font-semibold'>
+                    {title.slice(0, 20)}
+                  </h2>
                 </div>
                 <p className='truncate text-sm text-slate-300'>{description}</p>
                 <div className='flex items-center justify-between py-3'>
@@ -37,6 +39,24 @@ export const Products = () => {
                 <p>
                   <strong>${price}</strong>
                 </p>
+
+                <div className='flex space-x-1'>
+                  <button
+                    className='bg-gray-400 w-10 text-slate-100 rounded-sm'
+                    onClick={() => setQuantity((prev) => prev + 1)}
+                  >
+                    +
+                  </button>
+                  {quantity}
+                  <button
+                    className='bg-gray-400 w-10 text-slate-100 rounded-sm'
+                    onClick={() =>
+                      setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
+                    }
+                  >
+                    -
+                  </button>
+                </div>
 
                 <div className=''>
                   <button
