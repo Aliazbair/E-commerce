@@ -14,7 +14,12 @@
   font-family: 'Amiri-italic';
   src: url('/public/fonts/Amiri-Italic.ttf');
 }
+@layer components{
+  .wrap{
+    @apply  py-10 max-w-7xl mx-auto px-10;
+  }
 
+}
 .ali {
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }

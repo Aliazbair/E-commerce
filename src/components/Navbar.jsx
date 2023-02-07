@@ -12,18 +12,16 @@ export default function Navbar() {
         <Link to='/' className='hover:text-gray-200'>
           Home
         </Link>
-        {/* <Link to='/jokes' className='hover:text-gray-200'>
-          Jokes
-        </Link> */}
+      
         <Link to='/products' className='hover:text-gray-200'>
           Products
         </Link>
-        {/* <Link to='/login' className='hover:text-gray-200'>
+        <Link to='/login' className='hover:text-gray-200'>
           Login
-        </Link> */}
-        {/* <Link to='/register' className='hover:text-gray-200'>
+        </Link>
+        <Link to='/register' className='hover:text-gray-200'>
           Register
-        </Link> */}
+        </Link>
         <Link to='/cart' className='hover:text-gray-200'>
           <div className='relative'>
             <img className='w-10' src='/green-shopping-cart-10909.svg' alt='' />

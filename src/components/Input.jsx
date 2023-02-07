@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-export const Input = ({type,name,handleChange,value}) => {
+export const Input = ({ type, name, handleChange, value, placeholder }) => {
   return (
     <input
       type={type}
       name={name}
-      className='outline-none bg-slate-400/10 rounded-sm border-b py-4 px-6 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40'
+      className='shadow border text-gray-700 rounded py-2 px-3 form-input mt-1 block w-full ring-yellow-500 focus:ring outline-none'
       value={value}
       onChange={handleChange}
+      placeholder={placeholder}
     />
   );
-}
+};
